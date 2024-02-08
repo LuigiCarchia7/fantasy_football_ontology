@@ -1,0 +1,1593 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#"
+     xml:base="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:fanta="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://open.vocab.org/terms/"
+     xmlns:powder-s="http://www.w3.org/2007/05/powder-s#"
+     xmlns:sequence="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://open.vocab.org/terms/defines -->
+
+    <owl:AnnotationProperty rdf:about="http://open.vocab.org/terms/defines"/>
+    
+
+
+    <!-- http://open.vocab.org/terms/describes -->
+
+    <owl:AnnotationProperty rdf:about="http://open.vocab.org/terms/describes"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <skos:exactMatch rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy-football-ontology/Giocatore"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2007/05/powder-s#describedby -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2007/05/powder-s#describedby"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#compagnoDiSquadra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#compagnoDiSquadra">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocaIn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haGiocatore"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocaIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocaIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haGiocatore"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haGiocatore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haGiocatore">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haPrimoGiocatore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haPrimoGiocatore">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasFirstItem"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#primoGiocatoreDi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haSquadraPartecipante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haSquadraPartecipante">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partecipaA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Campionato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haValoreAttuale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haValoreAttuale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haValoreIniziale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haValoreIniziale">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partecipaA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partecipaA">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Campionato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#primoGiocatoreDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#primoGiocatoreDi">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#firstItemOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#riguardanteCampionato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#riguardanteCampionato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantacalcistica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#CampionatoCalcio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#ammonizioni -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#ammonizioni">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#assist -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#assist">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#autogal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#autogal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#espulsioni -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#espulsioni">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#età -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#età">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#fantaMedia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#fantaMedia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goalSubiti -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goalSubiti">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#media -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#media">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partiteGiocate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partiteGiocate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#rigoriSbagliati -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#rigoriSbagliati">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#rigoriSegnati -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#rigoriSegnati">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#valoreNumerico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#valoreNumerico">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:comment>Football Player that plays in Attack</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Campionato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Campionato">
+        <rdfs:comment>Championship in general real football or a fantasy football league</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#CampionatoCalcio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#CampionatoCalcio">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#PremierLeague"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SerieA"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Campionato"/>
+        <rdfs:comment>League Championship: Serie A and Premier League are the only 2 choices</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:comment>Football player that playes in midfield</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:comment>Football player that playes in defense</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
+        <skos:exactMatch>calciatore</skos:exactMatch>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q937857</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantacalcistica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantacalcistica">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#riguardanteCampionato"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#CampionatoCalcio"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Campionato"/>
+        <rdfs:comment>A championship where FantasySquad participates</rdfs:comment>
+        <rdfs:label>Lega Fantacalcistica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Portiere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Portiere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+        <rdfs:comment>Football player that playes in goal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraDiCalcio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraDiCalcio">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partecipaA"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#CampionatoCalcio"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra"/>
+        <rdfs:comment>Real Football Squad</rdfs:comment>
+        <skos:exactMatch>https://www.wikidata.org/wiki/Q476028</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantacalcio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantacalcio">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partecipaA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantacalcistica"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra"/>
+        <rdfs:comment>A squad made for partecipating a FantasyLeague</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore">
+        <rdfs:comment>Value in general including initial and current value</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#PremierLeague -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#PremierLeague"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Aaron_Ramsdale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Aaron_Ramsdale">
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore10"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore12"/>
+        <ammonizioni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ammonizioni>
+        <espulsioni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</espulsioni>
+        <età rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</età>
+        <fantaMedia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.43</fantaMedia>
+        <goalSubiti rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</goalSubiti>
+        <media rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</media>
+        <partiteGiocate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</partiteGiocate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Adrien_Rabiot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Adrien_Rabiot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Allison -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Allison">
+        <goalSubiti rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</goalSubiti>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Arsenal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Arsenal">
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Aaron_Ramsdale"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Bukayo_Saka"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Gabriel"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Martin_Odegaard"/>
+        <partecipaA rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#PremierLeague"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Bremer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Bremer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Federico_Gatti"/>
+        <sequence:precedes rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Adrien_Rabiot"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Bukayo_Saka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Bukayo_Saka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante"/>
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore30"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore29"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Carlos_Alcaraz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Carlos_Alcaraz">
+        <sequence:follows rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Niccolò_Barella"/>
+        <sequence:precedes rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Manuel_Locatelli"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Chelsea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Chelsea">
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Christopher_Nkunku"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Cole_Palmer"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Kepa"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Thiago_Silva"/>
+        <partecipaA rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#PremierLeague"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Christopher_Nkunku -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Christopher_Nkunku">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante"/>
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore29"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore30"/>
+        <assist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</assist>
+        <età rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</età>
+        <fantaMedia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.88</fantaMedia>
+        <goal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</goal>
+        <media rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.75</media>
+        <partiteGiocate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</partiteGiocate>
+        <rigoriSbagliati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rigoriSbagliati>
+        <rigoriSegnati rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rigoriSegnati>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Cole_Palmer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Cole_Palmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore18"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore13"/>
+        <assist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</assist>
+        <goal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Danilo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Danilo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+        <sequence:precedes rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Niccolò_Barella"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Dusan_Vlahovic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Dusan_Vlahovic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Niccolò_Barella"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Federico_Chiesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Federico_Chiesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Adrien_Rabiot"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Federico_Gatti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Federico_Gatti">
+        <sequence:follows rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Francesco_Acerbi"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Francesco_Acerbi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Francesco_Acerbi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+        <sequence:precedes rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Adrien_Rabiot"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Gabriel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Gabriel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore10"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore12"/>
+        <ammonizioni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ammonizioni>
+        <goal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Hakan_Calhanoglu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Hakan_Calhanoglu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+        <sequence:precedes rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Adrien_Rabiot"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Inter"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Inter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Inter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraDiCalcio"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Francesco_Acerbi"/>
+        <partecipaA rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SerieA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraDiCalcio"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Bremer"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Dusan_Vlahovic"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Federico_Chiesa"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Federico_Gatti"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Kenan_Yildiz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Kenan_Yildiz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Kepa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Kepa">
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore12"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore10"/>
+        <goalSubiti rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</goalSubiti>
+        <partiteGiocate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</partiteGiocate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaPremierLeague -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaPremierLeague">
+        <riguardanteCampionato rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#PremierLeague"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaSerieA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaSerieA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantacalcistica"/>
+        <riguardanteCampionato rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SerieA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Manuel_Locatelli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Manuel_Locatelli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+        <sequence:follows rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Niccolò_Barella"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Martin_Odegaard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Martin_Odegaard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore29"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore13"/>
+        <ammonizioni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ammonizioni>
+        <assist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</assist>
+        <autogal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</autogal>
+        <età rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</età>
+        <fantaMedia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.90</fantaMedia>
+        <media rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.87</media>
+        <partiteGiocate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</partiteGiocate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Niccolò_Barella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Niccolò_Barella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Inter"/>
+        <giocaIn rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SerieA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SerieA">
+        <haSquadraPartecipante rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Inter"/>
+        <haSquadraPartecipante rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Juventus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaPremier1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaPremier1">
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Bukayo_Saka"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Cole_Palmer"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Gabriel"/>
+        <haPrimoGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Kepa"/>
+        <partecipaA rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaPremierLeague"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaPremier2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaPremier2">
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Christopher_Nkunku"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Martin_Odegaard"/>
+        <haGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Thiago_Silva"/>
+        <haPrimoGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Aaron_Ramsdale"/>
+        <partecipaA rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaPremierLeague"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA1">
+        <haPrimoGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Yann_Sommer"/>
+        <partecipaA rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaSerieA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantaSerieA2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantacalcio"/>
+        <haPrimoGiocatore rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Wojchech_Szczesny"/>
+        <partecipaA rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#LegaFantaSerieA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Thiago_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Thiago_Silva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+        <haValoreAttuale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore13"/>
+        <haValoreIniziale rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore18"/>
+        <ammonizioni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ammonizioni>
+        <assist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</assist>
+        <fantaMedia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.05</fantaMedia>
+        <media rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.02</media>
+        <partiteGiocate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</partiteGiocate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore10">
+        <valoreNumerico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</valoreNumerico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore12">
+        <valoreNumerico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</valoreNumerico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore13">
+        <valoreNumerico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</valoreNumerico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore18">
+        <valoreNumerico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</valoreNumerico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore29">
+        <valoreNumerico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</valoreNumerico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore30">
+        <valoreNumerico rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</valoreNumerico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Wojchech_Szczesny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Wojchech_Szczesny">
+        <sequence:precedes rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Francesco_Acerbi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Yann_Sommer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Yann_Sommer">
+        <sequence:precedes rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Danilo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#attaccante">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#campionato">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#portiere">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#valore">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goalSub">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se un giocatore è primo giocatore di una lista di squadra fantacalcio allora è un portiere</rdfs:comment>
+        <rdfs:label>RegolaPor</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraFantacalcio"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haPrimoGiocatore"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Portiere"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se una squadra partecipa a un Campionato di calcio allora è una squadra di calcio</rdfs:comment>
+        <rdfs:label>RegolaCampionato</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#CampionatoCalcio"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#campionato"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#partecipaA"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#campionato"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Squadra"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#SquadraDiCalcio"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se un giocatore nella lista di squadra fantacalcistica precede un centrocampista e segue un centrocampista allora è un centrocampista</rdfs:comment>
+        <rdfs:label>RegolaCen</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#compagnoDiSquadra"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#compagnoDiSquadra"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#centrocampista2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Centrocampista"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se un giocatore nella lista di squadra fantacalcistica precede un difensore e segue un difensore allora è un difensore</rdfs:comment>
+        <rdfs:label>RegolaDif</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#compagnoDiSquadra"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#compagnoDiSquadra"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#difensore2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Difensore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se un giocatore precede un portiere allora sicuramente è un portiere</rdfs:comment>
+        <rdfs:label>RegolaPor2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haGiocatore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#portiere"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Portiere"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#portiere"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#portiere"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haGiocatore"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#squadra"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Portiere"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se una classe è assegnata a un giocatore come valore attuale allora è un valore</rdfs:comment>
+        <rdfs:label>RegolaVal2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haValoreAttuale"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#valore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#valore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se una classe è assegnata a un giocatore come valoreIniziale allora è un valore</rdfs:comment>
+        <rdfs:label>RegolaVal</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#haValoreIniziale"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#valore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Valore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#valore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se un giocatore segue un attaccante nella lista di squadra fantacalcistica allora è un attaccante</rdfs:comment>
+        <rdfs:label>RegolaAtt</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#attaccante"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#attaccante"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#compagnoDiSquadra"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#attaccante"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Attaccante"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regola che dice che se un giocatore ha almeno un goal subito allora è un portiere</rdfs:comment>
+        <rdfs:label>RegolaPor3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goalSub"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goalSubiti"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#goalSub"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Giocatore"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#Portiere"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/luigi/ontologies/2024/0/fantasy_football_ontology#giocatore"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
